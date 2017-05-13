@@ -1,1 +1,73 @@
 /* You can add global styles to this file, and also import other style files */
+@import '~@angular/material/prebuilt-themes/purple-green';
+
+body * {
+    font-family: 'Open Sans';
+}
+
+html, body {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+}
+
+md-sidenav-container,
+md-sidenav {
+    height: 100%;
+    display: flex;
+}
+
+md-sidenav {
+    padding: 10px 15px;
+}
+
+md-sidenav md-list {
+    md-list-item {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        md-icon {
+            margin-right: 5px;
+        }
+    }
+}
+
+#sidenav-target {
+    position: fixed;
+    top: 50px;
+    bottom: 0;
+    width: 10px;
+}
+
+md-card.photo-card img {
+    max-height: 100px;
+    max-width: 100px;
+}
+
+#app-sidenav {
+    max-width: 40%;
+}
+
+#photo-gallery {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    flex-wrap: wrap;
+    align-items: flex-start;
+
+    md-card.photo-card.mat-card {
+        max-height: 140px;
+        margin-right: 5px;
+        margin-bottom: 5px;
+        background: rgb(100,100,100);
+        padding: 7px;
+
+        md-card-title {
+            font-size: 1rem;
+            text-align: center;
+            margin-bottom: 5px;
+            font-weight: lighter;
+        }
+    }
+}

@@ -1,3 +1,18 @@
-<h1>
-  {{title}}
-</h1>
+<md-toolbar>Family Photo</md-toolbar>
+<photo-options-toolbar></photo-options-toolbar>
+<md-sidenav-container>
+  <md-sidenav #sidenav (mouseleave)="sidenav.close()" opened id="app-sidenav">
+    <div id="photo-gallery">
+      <md-card *ngFor="let img of photoAssets" class="photo-card">
+        <md-card-title>{{ img.title }}</md-card-title>
+        <img [src]="img.src"/>
+      </md-card>
+    </div>
+  </md-sidenav>
+  <div id="sidenav-target" (mouseenter)="sidenav.open()"></div>
+
+  <main>
+    <!-- app content goes here -->
+    
+  </main>
+</md-sidenav-container>

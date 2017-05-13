@@ -1,0 +1,7 @@
+<md-toolbar color="primary">
+  <button type="button" md-fab (click)="fileInput.click()">
+    <md-icon>add_to_photos</md-icon>
+  </button>
+  <input type="file" hidden #fileInput (change)="previewPhoto(fileInput.files)">
+  <!--<button md-button (click)="openDialog()">Launch dialog</button>-->
+</md-toolbar>

@@ -1,0 +1,15 @@
+<style>
+  :host * {
+    color: white;
+  }
+</style>
+
+<h1 md-dialog-title>Upload</h1>
+<div md-dialog-content>
+  <p>Add this photo to your album?</p>
+  <img [src]="sharedImageService.src"/>
+</div>
+<div md-dialog-actions>
+  <button md-button (click)="dialogRef.close('Yes')">Yes</button>
+  <button md-button (click)="dialogRef.close('No')">No</button>
+</div>
